@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Budget/Expense Tracker 💸</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="wrapper">
+
+    <h2>💰 Budget / Expense Tracker</h2>
+
+    <div class="sub-container">
+
+        <!-- Budget Section -->
+        <div class="card">
+            <h3>Set Budget</h3>
+            <input type="number" id="total-amount" placeholder="Enter Budget">
+            <p class="error hide" id="budget-error">Invalid Budget</p>
+            <button id="total-amount-button">Set Budget</button>
+        </div>
+
+        <!-- Add Expense -->
+        <div class="card">
+            <h3>Add Expense</h3>
+            <input type="text" id="product-title" placeholder="Expense Title">
+            <input type="number" id="user-amount" placeholder="Amount">
+            <input type="date" id="expense-date">
+            <select id="category">
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Bills">Bills</option>
+                <option value="Other">Other</option>
+            </select>
+            <p class="error hide" id="expense-error">Invalid Expense</p>
+            <button id="check-amount">Add Expense</button>
+        </div>
+
+    </div>
+
+    <!-- Summary -->
+    <div class="summary">
+        <div>
+            <p>Budget</p>
+            <span id="amount">0</span>
+        </div>
+        <div>
+            <p>Expenses</p>
+            <span id="expenditure-value">0</span>
+        </div>
+        <div>
+            <p>Balance</p>
+            <span id="balance-amount">0</span>
+        </div>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter-section">
+        <select id="filter-category">
+            <option value="All">All Categories</option>
+            <option value="Food">Food</option>
+            <option value="Travel">Travel</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Bills">Bills</option>
+            <option value="Other">Other</option>
+        </select>
+        <button id="clear-all">Clear All</button>
+    </div>
+
+    <!-- Expense List -->
+    <div id="list" class="list"></div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
